@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
+    <title>Ihsan - Portofolio</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 20s linear infinite',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: {
+                                transform: 'translateX(0)'
+                            },
+                            to: {
+                                transform: 'translateX(-100%)'
+                            },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-[url('assets/background/BG.png')]">
+    <main class="max-w-screen-lg mx-5 md:mx-10 lg:mx-auto ">
+        <nav>
+            <div
+                class="fixed z-50  bottom-20 md:bottom-16 lg:bottom-4 left-1/2 transform -translate-x-24 sm:-translate-x-20">
+                <div class="fixed glowing-purple  z-50   max-w-xl  bg-[#0F001C] rounded-2xl lg:bottom-7 bottom-15">
+                    <div class="flex justify-center align-middle items-center h-full ">
+                        <button data-tooltip-target="tooltip-hello" type="button"
+                            class="inline-flex flex-col items-center justify-center h-12 w-12 rounded-s-2xl hover:bg-[#140025]  group">
+                            <div class="w-1 h-1 opacity-0 bg-green-400 rounded-full"></div>
+                            <svg class="w-5 h-5 mb-1 text-white  transform group-hover:scale-150 group-hover:rotate-12 transition-transform duration-300"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M8.78399 22.0004C7.09899 21.2484 5.70699 20.0764 4.79199 18.5074M14.825 2.1864C16.502 1.7094 18.233 2.1634 19.442 3.3974"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                                <path
+                                    d="M10.4157 9.52622C10.5159 9.69808 10.6804 9.82308 10.8728 9.87371C11.0652 9.92435 11.2698 9.89647 11.4417 9.79622C11.6135 9.69597 11.7385 9.53155 11.7892 9.33914C11.8398 9.14673 11.8119 8.94208 11.7117 8.77022L10.4157 9.52622ZM7.53769 12.1332C7.58733 12.2183 7.65324 12.2928 7.73167 12.3524C7.8101 12.412 7.8995 12.4556 7.99477 12.4807C8.09004 12.5058 8.18932 12.5118 8.28694 12.4985C8.38455 12.4853 8.47859 12.4529 8.56369 12.4032C8.64879 12.3536 8.72327 12.2877 8.78289 12.2092C8.84252 12.1308 8.88611 12.0414 8.91118 11.9461C8.93625 11.8509 8.94231 11.7516 8.92902 11.654C8.91572 11.5564 8.88333 11.4623 8.83369 11.3772L7.53769 12.1332ZM16.0467 10.1492L16.4197 10.8002C16.5056 10.751 16.581 10.6853 16.6414 10.6068C16.7017 10.5283 16.746 10.4387 16.7716 10.343C16.7971 10.2473 16.8035 10.1476 16.7903 10.0494C16.7771 9.95129 16.7446 9.85673 16.6947 9.77122L16.0467 10.1492ZM17.0147 5.75422C17.0643 5.83932 17.1302 5.9138 17.2087 5.97343C17.2871 6.03305 17.3765 6.07664 17.4718 6.10171C17.567 6.12678 17.6663 6.13284 17.7639 6.11955C17.8616 6.10625 17.9556 6.07386 18.0407 6.02422C18.1258 5.97458 18.2003 5.90867 18.2599 5.83024C18.3195 5.75181 18.3631 5.66241 18.3882 5.56714C18.4133 5.47187 18.4193 5.37259 18.406 5.27497C18.3927 5.17736 18.3603 5.08332 18.3107 4.99822L17.0147 5.75422ZM13.7837 15.3002C13.8333 15.3853 13.8992 15.4598 13.9777 15.5194C14.0561 15.579 14.1455 15.6226 14.2408 15.6477C14.336 15.6728 14.4353 15.6788 14.5329 15.6655C14.6306 15.6523 14.7246 15.6199 14.8097 15.5702C14.8948 15.5206 14.9693 15.4547 15.0289 15.3762C15.0885 15.2978 15.1321 15.2084 15.1572 15.1131C15.1823 15.0179 15.1883 14.9186 15.175 14.821C15.1617 14.7234 15.1293 14.6293 15.0797 14.5442L13.7837 15.3002ZM20.3467 8.49022C20.2452 8.32103 20.0812 8.19863 19.8902 8.14952C19.6991 8.10041 19.4964 8.12855 19.3259 8.22785C19.1555 8.32716 19.031 8.48962 18.9795 8.68004C18.928 8.87047 18.9535 9.07352 19.0507 9.24522L20.3467 8.49022ZM8.98669 20.1802C9.1612 20.2757 9.3665 20.2979 9.55741 20.2421C9.74832 20.1862 9.90921 20.0567 10.0047 19.8822C10.1002 19.7077 10.1224 19.5024 10.0665 19.3115C10.0106 19.1206 9.8812 18.9597 9.70669 18.8642L8.98669 20.1802ZM13.8887 19.5452C13.7912 19.5598 13.6976 19.5934 13.6132 19.6442C13.5287 19.6949 13.4551 19.7618 13.3965 19.841C13.3379 19.9202 13.2955 20.0102 13.2717 20.1058C13.2479 20.2014 13.2431 20.3008 13.2577 20.3982C13.2723 20.4957 13.3059 20.5893 13.3566 20.6737C13.4074 20.7582 13.4743 20.8318 13.5535 20.8904C13.6327 20.949 13.7227 20.9914 13.8183 21.0152C13.9139 21.039 14.0132 21.0438 14.1107 21.0292L13.8887 19.5452ZM4.38269 9.01822C5.01569 8.65622 5.63969 8.87822 5.85369 9.24522L7.14969 8.49022C6.43369 7.26222 4.82669 7.03622 3.63769 7.71522L4.38269 9.01822ZM3.63769 7.71522C2.44769 8.39622 1.83469 9.89722 2.55469 11.1312L3.85069 10.3752C3.64069 10.0152 3.75069 9.37922 4.38269 9.01822L3.63769 7.71522ZM7.04969 3.75022L7.89169 5.19422L9.18769 4.43822L8.34469 2.99522L7.04969 3.75022ZM7.89169 5.19422L10.4167 9.52522L11.7127 8.77022L9.18769 4.43822L7.89169 5.19422ZM8.83469 11.3772L7.14969 8.49022L5.85369 9.24522L7.53769 12.1332L8.83469 11.3772ZM7.14969 8.49022L5.04469 4.88022L3.74969 5.63622L5.85369 9.24622L7.14969 8.49022ZM5.57669 3.52322C6.21069 3.16122 6.83469 3.38322 7.04869 3.75022L8.34469 2.99522C7.62869 1.76722 6.02169 1.54022 4.83269 2.22022L5.57669 3.52322ZM4.83269 2.22022C3.64269 2.90122 3.02969 4.40222 3.74969 5.63622L5.04469 4.88022C4.83469 4.52022 4.94569 3.88422 5.57669 3.52322L4.83269 2.22022ZM11.1897 3.30822L13.7157 7.64022L15.0117 6.88422L12.4857 2.55322L11.1897 3.30822ZM13.7157 7.64022L15.3997 10.5272L16.6947 9.77122L15.0117 6.88422L13.7157 7.64022ZM9.71869 3.08022C10.3517 2.71922 10.9757 2.94122 11.1897 3.30822L12.4857 2.55322C11.7697 1.32522 10.1627 1.09922 8.97369 1.77922L9.71869 3.08022ZM8.97369 1.77922C7.78369 2.45922 7.17069 3.96122 7.89069 5.19522L9.18669 4.43922C8.97669 4.07922 9.08669 3.44322 9.71869 3.08222L8.97369 1.77922ZM15.5437 5.52722C16.1767 5.16522 16.8007 5.38622 17.0147 5.75422L18.3107 4.99822C17.5947 3.77122 15.9877 3.54622 14.7987 4.22522L15.5437 5.52722ZM14.7987 4.22522C13.6087 4.90522 12.9957 6.40622 13.7157 7.64022L15.0117 6.88522C14.8017 6.52522 14.9117 5.88822 15.5437 5.52722L14.7987 4.22522ZM2.55469 11.1312L6.34269 17.6282L7.63769 16.8722L3.85069 10.3752L2.55469 11.1312ZM19.5407 10.0852C21.1457 12.8382 19.9507 16.6792 16.5847 18.6022L17.3297 19.9042C21.2537 17.6622 22.9507 12.9552 20.8367 9.32922L19.5407 10.0852ZM15.0797 14.5452C14.4047 13.3862 14.8767 11.6822 16.4197 10.8002L15.6747 9.49822C13.5727 10.6992 12.5997 13.2682 13.7837 15.3002L15.0797 14.5452ZM19.0507 9.24522L19.5407 10.0852L20.8367 9.32922L20.3467 8.49022L19.0507 9.24522ZM9.70669 18.8642C8.84756 18.403 8.13033 17.7137 7.63769 16.8722L6.34269 17.6282C6.97312 18.7054 7.88785 19.5883 8.98669 20.1802L9.70669 18.8642ZM16.5857 18.6022C15.7524 19.0799 14.8381 19.3996 13.8887 19.5452L14.1107 21.0292C15.2439 20.8558 16.3352 20.4744 17.3297 19.9042L16.5857 18.6022Z"
+                                    fill="white" />
+                            </svg>
+                            <div class="w-1 h-1 opacity-0 bg-[#0F001C] rounded-full"></div>
+                            <span class="sr-only">Hello</span>
+                        </button>
+                        <div id="tooltip-hello" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-[#0F001C] border border-[#370063] rounded-2xl rounded-lg shadow-xs opacity-0 tooltip">
+                            Hello
+                        </div>
+                        <button data-tooltip-target="tooltip-about" type="button"
+                            class="inline-flex flex-col items-center justify-center h-12 w-12 hover:bg-[#140025] group">
+                            <div class="w-1 h-1 opacity-0 bg-green-400 rounded-full"></div>
+                            <svg class="w-5 h-5 mb-1 text-white  transform group-hover:scale-150 group-hover:rotate-12 transition-transform duration-300"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M12 10C14.2091 10 16 8.20914 16 6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6C8 8.20914 9.79086 10 12 10Z"
+                                    stroke="white" stroke-width="1.5" />
+                                <path
+                                    d="M19.998 18C19.9993 17.836 20 17.6693 20 17.5C20 15.015 16.418 13 12 13C7.582 13 4 15.015 4 17.5C4 19.985 4 22 12 22C14.231 22 15.84 21.843 17 21.563"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                            <div class="w-1 h-1 opacity-0 bg-[#0F001C] rounded-full"></div>
+                            <span class="sr-only">About</span>
+                        </button>
+                        <div id="tooltip-about" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-[#0F001C] border border-[#370063] rounded-2xl rounded-lg shadow-xs opacity-0 tooltip">
+                            About
+                        </div>
+                        <button data-tooltip-target="tooltip-projects" type="button"
+                            class="inline-flex flex-col items-center justify-center h-12 w-12 hover:bg-[#140025] group">
+                            <div class="w-1 h-1 opacity-0 bg-green-400 rounded-full"></div>
+                            <svg class="w-5 h-5 mb-1 text-white  transform group-hover:scale-150 group-hover:rotate-12 transition-transform duration-300"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M19.898 16H7.898C6.968 16 6.503 16 6.121 16.102C5.61231 16.2384 5.14849 16.5063 4.77618 16.8788C4.40386 17.2513 4.13616 17.7152 4 18.224"
+                                    stroke="white" stroke-width="1.5" />
+                                <path
+                                    d="M8 7H16M8 10.5H13M10 22C7.172 22 5.757 22 4.879 21.121C4 20.243 4 18.828 4 16V8C4 5.172 4 3.757 4.879 2.879C5.757 2 7.172 2 10 2H14C16.828 2 18.243 2 19.121 2.879C20 3.757 20 5.172 20 8M14 22C16.828 22 18.243 22 19.121 21.121C20 20.243 20 18.828 20 16V12"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                            <div class="w-1 h-1 opacity-0 bg-[#0F001C] rounded-full"></div>
+                            <span class="sr-only">Projects</span>
+                        </button>
+                        <div id="tooltip-projects" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-[#0F001C] border border-[#370063] rounded-2xl rounded-lg shadow-xs opacity-0 tooltip">
+                            Projects
+
+                        </div>
+                        <button data-tooltip-target="tooltip-experiences" type="button"
+                            class="inline-flex flex-col items-center justify-center h-12 w-12 rounded-e-2xl hover:bg-[#140025] group">
+                            <div class="w-1 h-1 opacity-0 bg-green-400 rounded-full"></div>
+                            <svg class="w-5 h-5 mb-1 text-white  transform group-hover:scale-150 group-hover:rotate-12 transition-transform duration-300"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M14.361 4.07921C14.361 4.07921 14.476 6.04921 16.214 7.78621C17.952 9.52421 19.921 9.64021 19.921 9.64021L20.848 8.71321C21.5855 7.97577 21.9998 6.9756 21.9998 5.93271C21.9998 4.88982 21.5855 3.88964 20.848 3.15221C20.1106 2.41477 19.1104 2.00049 18.0675 2.00049C17.0247 2.00049 16.0245 2.41477 15.287 3.15221L14.36 4.07921L12 6.43921M19.921 9.63921L14.661 14.9012L11.56 18.0002L11.4 18.1612C10.822 18.7382 10.533 19.0272 10.215 19.2752C9.83957 19.5678 9.43354 19.8189 9.00404 20.0242C8.64004 20.1972 8.25304 20.3262 7.47804 20.5842L4.19704 21.6782M4.19704 21.6782L3.39504 21.9462C3.2081 22.0089 3.00737 22.0182 2.81543 21.9731C2.62349 21.9279 2.44794 21.8302 2.30851 21.6907C2.16909 21.5513 2.07132 21.3758 2.02619 21.1838C1.98106 20.9919 1.99036 20.7912 2.05304 20.6042L2.32104 19.8022M4.19704 21.6782L2.32104 19.8022M2.32104 19.8022L3.41504 16.5212C3.67304 15.7462 3.80204 15.3592 3.97504 14.9952C4.18104 14.5639 4.43071 14.1602 4.72404 13.7842C4.97204 13.4662 5.26104 13.1772 5.83804 12.6002L8.50004 9.93921"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                            <div class="w-1 h-1 opacity-0 bg-[#0F001C] rounded-full"></div>
+                            <span class="sr-only">Experiences</span>
+                        </button>
+                        <div id="tooltip-experiences" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-[#0F001C] border border-[#370063] rounded-2xl rounded-lg shadow-xs opacity-0 tooltip">
+                            Experiences
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="h-[6rem]"></div>
+
+        <div>
+            <p class="text-white text-2xl md:text-4xl font-medium">Website Project</p>
+            <div class="h-[1rem]"></div>
+            <p class="text-white text-xl md:text-3xl font-semibold">E-Learning Platform Digital Things Developer</p>
+        </div>
+        <div class="h-[3rem]"></div>
+
+
+        <section class="bg-[#D9D9D9] max-w-screen-lg h-[30rem]">
+        </section>
+
+
+
+        <div class="h-[3rem]"></div>
+
+
+        <div class="flex flex-col md:flex-row max-w-screen-lg gap-8">
+            <div class="flex w-full  shadow-[#804CDF] flex-col rounded-xl">
+                <div class="flex flex-col">
+                    <p class="text-white font-semibold text-xl">Overview</p>
+                    <div class="h-[1rem]"></div>
+                    <p class="text-sm font-light text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum sodales tortor magna, ornare fermentum nisi varius mattis. Suspendisse semper
+                        elementum risus, tempor posuere arcu varius id. Quisque malesuada quam eget mauris varius
+                        placerat. Donec efficitur, justo vitae molestie egestas, ante arcu tempus nulla, </p>
+                </div>
+                <div class="h-[2rem]"></div>
+                <div class="flex flex-col">
+                    <p class="text-white font-semibold text-xl">Goals & Motivation</p>
+                    <div class="h-[1rem]"></div>
+                    <p class="text-sm font-light text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum sodales tortor magna, ornare fermentum nisi varius mattis. Suspendisse semper
+                        elementum risus, tempor posuere arcu varius id. Quisque malesuada quam eget mauris varius
+                        placerat. Donec efficitur, justo vitae molestie egestas, ante arcu tempus nulla, </p>
+
+
+                </div>
+            </div>
+            <div class="flex grid grid-rows-2 flex-col">
+                <p class="text-white font-semibold text-xl">Techstacks</p>
+                <div class="h-[1rem]"></div>
+                <div class="flex flex-col gap-5 max-w-[20rem] md:max-w-screen-lg">
+                    <div
+                        class="flex w-full justify-between shadow-[#804CDF] border border-[#804CDF] bg-[#804cdf17] hover:bg-[#A675FF30] transition cursor-pointer duration-300 flex rounded-xl items-center justify-center px-[1rem] py-[1rem]">
+                        <img src="assets/techstacks/ts-tailwind.png" class="w-[3rem]" alt="">
+                        <div class="w-[2rem]"></div>
+                        <div class="flex flex-col">
+                            <p class="text-white font-medium text-lg">TailwindCSS</p>
+                            <p class="text-white font-regular text-xs">I am experienced and skilled in styling websites
+                                using the Tailwind.</p>
+
+                        </div>
+                    </div>
+                    <div
+                        class="flex w-full justify-between shadow-[#804CDF] border border-[#804CDF] bg-[#804cdf17] hover:bg-[#A675FF30] transition cursor-pointer duration-300  flex rounded-xl items-center justify-center px-[1rem] py-[1rem]">
+                        <img src="assets/techstacks/ts-bootstrap.png" class="w-[3rem]" alt="">
+                        <div class="w-[2rem]"></div>
+                        <div class="flex flex-col">
+                            <p class="text-white font-medium text-lg">TailwindCSS</p>
+                            <p class="text-white font-regular text-xs">I am experienced and skilled in styling websites
+                                using the Tailwind.</p>
+
+                        </div>
+                    </div>
+                    <div
+                        class="flex w-full justify-between shadow-[#804CDF] border border-[#804CDF] bg-[#804cdf17] hover:bg-[#A675FF30] transition cursor-pointer duration-300 flex rounded-xl items-center justify-center px-[1rem] py-[1rem]">
+                        <img src="assets/techstacks/ts-react.png" class="w-[3rem]" alt="">
+                        <div class="w-[2rem]"></div>
+                        <div class="flex flex-col">
+                            <p class="text-white font-medium text-lg">TailwindCSS</p>
+                            <p class="text-white font-regular text-xs">I am experienced and skilled in styling websites
+                                using the Tailwind.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="h-[10rem]"></div>
+
+
+        <!-- Footer Section =================================  =================================  -->
+        <section>
+            <div class="w-full flex items-center justify-between bg-[#ffffff0c] px-4 sm:px-5 py-4 rounded-2xl">
+                <!-- Name (visible on desktop) -->
+                <p class="text-xl hidden md:block font-medium text-white">Ihsan Ahmad Fakhriansyah</p>
+
+                <!-- Social Media Icons -->
+                <div class="flex w-full md:w-auto gap-2 justify-center items-center">
+                    <a class="hover:scale-105 transition duration-500 flex justify-center items-center py-2 px-5 gap-x-2 rounded-xl text-md md:text-lg font-medium text-white bg-[#ffffff23]"
+                        href="#">
+                        <img class="w-5 md:w-8" src="assets/icon/ic-github.png" alt="Github"> Github
+                    </a>
+                    <a class="hover:scale-105 transition duration-500 flex justify-center items-center py-2 px-5 gap-x-2 rounded-xl text-md md:text-lg font-medium text-white bg-[#ffffff23]"
+                        href="#">
+                        <img class="w-5 md:w-8" src="assets/icon/ic-linkedin.png" alt="LinkedIn"> Linkedin
+                    </a>
+                    <a class="hover:scale-105 transition duration-500 flex justify-center items-center py-2 px-5 gap-x-2 rounded-xl text-md md:text-lg font-medium text-white bg-[#ffffff23]"
+                        href="#">
+                        <img class="w-5 md:w-8" src="assets/icon/ic-gmail.png" alt="Gmail"> Gmail
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="h-5"></div>
+        <p class="text-white text-lg flex justify-center opacity-70">© 2025 ihsanafrr. All Rights Reserved.</p>
+        <div class="h-32"></div>
+        <!-- Footer Section =================================  =================================  -->
+
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+        <script>
+            const AnimateOnScroll = function ({
+                offset
+            } = {
+                offset: 10
+            }) {
+                // Define a dobra superior, inferior e laterais da tela
+                const windowTop = (offset * window.innerHeight) / 100;
+                const windowBottom = window.innerHeight - windowTop;
+                const windowLeft = 0;
+                const windowRight = window.innerWidth;
+
+                this.start = (element) => {
+                    window.requestAnimationFrame(() => {
+                        // Seta os atributos customizados
+                        element.style.animationDelay = element.dataset.animationDelay;
+                        element.style.animationDuration = element.dataset.animationDuration;
+
+                        // Inicia a animacao setando a classe para animar
+                        element.classList.add(element.dataset.animation);
+
+                        // Seta o elemento como animado
+                        element.dataset.animated = "true";
+                    });
+                };
+
+                this.inViewport = (element) => {
+                    // Obtem o boundingbox do elemento
+                    const elementRect = element.getBoundingClientRect();
+                    const elementTop =
+                        elementRect.top + parseInt(element.dataset.animationOffset) ||
+                        elementRect.top;
+                    const elementBottom =
+                        elementRect.bottom - parseInt(element.dataset.animationOffset) ||
+                        elementRect.bottom;
+                    const elementLeft = elementRect.left;
+                    const elementRight = elementRect.right;
+
+                    // Verifica se o elemento esta na tela
+                    return (
+                        elementTop <= windowBottom &&
+                        elementBottom >= windowTop &&
+                        elementLeft <= windowRight &&
+                        elementRight >= windowLeft
+                    );
+                };
+
+                // Percorre o array de elementos, verifica se o elemento está na tela e inicia animação
+                this.verifyElementsInViewport = (els = elements) => {
+                    for (let i = 0, len = els.length; i < len; i++) {
+                        // Passa para o proximo laço se o elemento ja estiver animado
+                        if (els[i].dataset.animated) continue;
+
+                        this.inViewport(els[i]) && this.start(els[i]);
+                    }
+                };
+
+                // Obtem todos os elementos a serem animados
+                this.getElements = () =>
+                    document.querySelectorAll("[data-animation]:not([data-animated])");
+
+                // Atualiza a lista de elementos a serem animados
+                this.update = () => {
+                    elements = this.getElements();
+                    elements && this.verifyElementsInViewport(elements);
+                };
+
+                // Inicia os eventos
+                window.addEventListener("load", this.update, false);
+                window.addEventListener(
+                    "scroll",
+                    () => this.verifyElementsInViewport(elements), {
+                        passive: true
+                    }
+                );
+                window.addEventListener(
+                    "resize",
+                    () => this.verifyElementsInViewport(elements), {
+                        passive: true
+                    }
+                );
+            };
+
+            // Initialize
+            const options = {
+                offset: 15 // percentage of the window
+            };
+
+            const animation = new AnimateOnScroll(options);
+
+            // fade in on scrool bawah ================================= end
+        </script>
+    </main>
+</body>
+
+</html>
