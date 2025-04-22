@@ -10,11 +10,11 @@ class ExperienceController extends Controller
     public function index()
     {
         $experiences = Experience::latest()->get();
-        return view('frontend.experiences.index', compact('experiences'));
+        return view('frontend.pages.experiences.experience', compact('experiences'));
     }
 
     public function show(Experience $experience)
     {
-        return view('frontend.experiences.show', compact('experience'));
+        return view('frontend.pages.experiences.experience-detail', compact('experience'));
     }
 }

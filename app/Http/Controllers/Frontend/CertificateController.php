@@ -10,6 +10,6 @@ class CertificateController extends Controller
     public function index()
     {
         $certificates = Certificate::latest()->get();
-        return view('frontend.certificates.index', compact('certificates'));
+        return view('frontend.pages.certificates', compact('certificates'));
     }
 }

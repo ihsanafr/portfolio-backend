@@ -10,6 +10,6 @@ class TechstackController extends Controller
     public function index()
     {
         $techstacks = Techstack::latest()->get();
-        return view('frontend.techstacks.index', compact('techstacks'));
+        return view('frontend.pages.techstacks', compact('techstacks'));
     }
 }

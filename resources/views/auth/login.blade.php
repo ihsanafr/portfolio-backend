@@ -1,4 +1,4 @@
-<x-guest-layout>
+{{-- <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -44,4 +44,47 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+</x-guest-layout> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login To Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
+
+</head>
+
+<body class="font-['General Sans'] bg-[#f5f5f5] flex flex-col items-center justify-center align-center h-screen">
+
+
+    <div class="bg-white p-10 shadow-md rounded-2xl w-[30rem]">
+        <p class="font-bold">Selamat Datang!</p>
+
+        <p class="font-regular text-lg">Masuk Kedalam Dashboard</p>
+        <div class="h-10"></div>
+        <form action="{{ route('login') }}" method="POST">
+            @csrf
+            <p class="text-sm">Email</p>
+            <input name="email" :value="old('email')" required autofocus autocomplete="username" id="email"  type="email" class="mt-2 p-3 bg-gray-100 border border-gray-300 rounded-xl w-full"
+                placeholder="Email">
+            <div class="h-5"></div>
+            <p class="text-sm">Password</p>
+            <input type="password" name="password" required autocomplete="current-password" type="password" class="mt-2 p-3 bg-gray-100 border border-gray-300 rounded-xl w-full" placeholder="Password">
+            <div class="h-10"></div>
+            <button type="submit"
+                class="bg-blue-700 hover:bg-blue-500 font-semibold text-white py-2 px-10 rounded-lg transition transform duration-300">{{ __('Log in') }}
+            </button>
+        </form>
+    </div>
+
+</body>
+
+</html>

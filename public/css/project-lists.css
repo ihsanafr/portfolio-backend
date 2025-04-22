@@ -1,0 +1,278 @@
+
+*{
+    font-family: 'General Sans', sans-serif;
+}
+body {
+    overflow-x: hidden;
+}
+
+
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+    }
+}
+
+/* Kelas untuk titik hijau yang memancar */
+.glowing {
+    animation: glowing 1.5s infinite;
+}
+
+/* Animasi gradient untuk teks */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes glowing-purple {
+    0% {
+        box-shadow: 0 0 5px #a159ff1f, 0 0 10px #a159ff1f, 0 0 15px #a159ff1f;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #a159ff1f, 0 0 30px #a159ff1f, 0 0 40px #a159ff1f;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #a159ff1f, 0 0 10px #a159ff1f, 0 0 15px #a159ff1f;
+    }
+}
+
+/* Kelas untuk titik hijau yang memancar */
+.glowing-purple {
+    animation: glowing-purple 1.5s infinite;
+}
+.gradient-text {
+    background: linear-gradient(90deg, #6F00C9, #B881E4, #dec2f4);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-animation 4s ease infinite;
+}
+
+.drop-in {
+    animation: drop-in 1s ease 200ms backwards;
+}
+
+.drop-in-2 {
+    animation: drop-in 1200ms ease 500ms backwards;
+}
+
+.drop-in-3 {
+    animation: drop-in 1500ms ease 800ms backwards;
+}
+
+.drop-in-4 {
+    animation: drop-in 1800ms ease 1000ms backwards;
+}
+
+.drop-in-5 {
+    animation: drop-in 2000ms ease 1200ms backwards;
+}
+
+.drop-out {
+    animation: drop-out 1200ms ease 500ms backwards;
+}
+
+@keyframes drop-in {
+    from {
+        opacity: 0;
+        transform: translatex(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+
+@keyframes drop-out {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+
+:root {
+    --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-duration: 1s;
+}
+
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-25%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes slideInleft {
+    0% {
+        opacity: 0;
+        transform: translateX(25%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-25%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.75);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes zoomReverseIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.25);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes flipInY {
+    0% {
+        opacity: 0;
+        transform: perspective(90vw) rotateY(67.50deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+[data-animation] {
+    opacity: 0;
+    animation-timing-function: var(--animation-timing-function);
+    animation-fill-mode: both;
+    animation-duration: var(--animation-duration);
+    will-change: transform, opacity;
+}
+
+
+.animations-disabled {
+
+    &,
+    [data-animation] {
+        animation: none !important;
+        opacity: 1 !important;
+    }
+}
+
+
+.slideInUp {
+    animation-name: slideInUp;
+}
+
+.slideInDown {
+    animation-name: slideInDown;
+}
+
+.slideInLeft {
+    animation-name: slideInleft;
+}
+
+.slideInRight {
+    animation-name: slideInRight;
+}
+
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+
+.zoomIn {
+    animation-name: zoomIn;
+}
+
+.zoomReverseIn {
+    animation-name: zoomReverseIn;
+}
+
+.flipInY {
+    animation-name: flipInY;
+}
+
+.flipOutY {
+    animation-name: flipInY;
+    animation-direction: reverse;
+}
